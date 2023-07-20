@@ -24,7 +24,7 @@ jobs:
         # JFrog Platform access token
         JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
     - run: |
-        jf rt ping
+        jf rt ping --url=${{ secrets.JF_URL }}
     
     - uses: actions/checkout@v3
     - name: Build the Docker image
